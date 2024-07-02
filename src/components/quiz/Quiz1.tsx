@@ -40,12 +40,8 @@ function Quiz1() {
         break;
       case 4:
         try {
-          await getRoadmap({ info: `${answers} \n ${info}` });
-
-          
-          router.navigate(`/roadmap/${dataRoadmap?.id}`, {
-            state: { isLoading: isLoading, id: dataRoadmap?.id },
-          });
+          const done = await getRoadmap({ info: `${answers} \n ${info}` });
+          console.log("done", done);
         } catch (error) {
           console.log("Error", error);
         }
@@ -58,6 +54,11 @@ function Quiz1() {
   };
 
   if (isLoading1 || isLoading2 || isLoading3) return <div>Loading...</div>;
+
+  if (dataRoadmap)
+    router.navigate(`/roadmap/${dataRoadmap?.id}`, {
+      state: { isLoading: isLoading, id: dataRoadmap?.id },
+    });
 
   let data: dataType;
   if (questionPage === 2) data = data1!;
