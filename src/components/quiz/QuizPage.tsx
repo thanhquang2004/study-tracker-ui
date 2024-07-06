@@ -23,8 +23,8 @@ function QuizPage(question: QuizPageProps) {
   const [optionAnswer, setOptionAnswer] = useState("");
 
   return (
-    <Container>
-      <Grid container spacing={2} width="140vh" height="60vh">
+    <Container sx={{paddingTop: "60px"}}>
+      <Grid container spacing={2}>
         <Grid
           item
           md={6}

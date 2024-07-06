@@ -1,4 +1,3 @@
-import React, { useState, useEffect } from "react";
 import {
   Typography,
   Paper,
@@ -13,11 +12,26 @@ import {
   Chip,
   IconButton,
   Tooltip,
+  Box,
+  Modal,
 } from "@mui/material";
 import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
 import { RoadmapType } from "../../interfaces/roadmap.interface";
+import React, { useState } from "react";
 
 const Roadmap = ({ roadmap }: RoadmapType) => {
+  const [openResourceModal, setOpenResourceModal] = useState(false);
+  const [selectedSubtask, setSelectedSubtask] = useState(null);
+
+  const handleResourceClick = (subtask: any) => {
+    setSelectedSubtask(subtask);
+    setOpenResourceModal(true);
+  };
+
+  const handleCloseModal = () => {
+    setOpenResourceModal(false);
+  };
+
   return (
     <Paper elevation={3} sx={{ padding: 2, width: "80vh" }}>
       <Typography variant="h5" gutterBottom>
@@ -75,7 +89,10 @@ const Roadmap = ({ roadmap }: RoadmapType) => {
                                 sx={{ ml: 2 }}
                               />
                               <Tooltip title="Resources">
-                                <IconButton aria-label="resources">
+                                <IconButton
+                                  aria-label="resources"
+                                  onClick={() => handleResourceClick(subtask)}
+                                >
                                   <span role="img" aria-label="resources">
                                     🗃️
                                   </span>
@@ -93,6 +110,40 @@ const Roadmap = ({ roadmap }: RoadmapType) => {
           </React.Fragment>
         ))}
       </List>
+
+      <Modal
+        open={openResourceModal}
+        onClose={handleCloseModal}
+        aria-labelledby="modal-modal-title"
+        aria-describedby="modal-modal-description"
+      >
+        <Box
+          sx={{
+            position: "absolute",
+            top: "50%",
+            left: "50%",
+            transform: "translate(-50%, -50%)",
+            width: 600,
+            bgcolor: "background.paper",
+            border: "2px solid #000",
+            boxShadow: 24,
+            p: 4,
+          }}
+        >
+          <Typography id="modal-modal-title" variant="h6" component="h2">
+            Resources for {selectedSubtask?.Name}
+          </Typography>
+          {/* Display resources here */}
+          <Typography id="modal-modal-description" sx={{ mt: 2 }}>
+            {/* Replace with actual resource data */}
+            {selectedSubtask?.Resources.map((resource: any) => (
+              <Typography key={resource} variant="body1">
+                {resource}
+              </Typography>
+            ))}
+          </Typography>
+        </Box>
+      </Modal>
     </Paper>
   );
 };

@@ -13,6 +13,8 @@ import Typography from "@mui/material/Typography";
 import Container from "@mui/material/Container";
 import { z } from "zod";
 import { useLogin } from "../../hooks/useLogin";
+import router from "../Routes";
+import Loader from "../loader/Loader";
 
 // function Copyright(props: any) {
 //   return (
@@ -40,7 +42,7 @@ const signInSchema = z.object({
 });
 
 export default function SignIn() {
-  const { login, data, isLoading } = useLogin();
+  const { login, isLoading } = useLogin();
 
   const handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
@@ -51,8 +53,8 @@ export default function SignIn() {
     login(result.data);
   };
 
-  if(isLoading) {
-    return <div>Loading...</div>;
+  if (isLoading) {
+    return <Loader />;
   }
 
   return (
@@ -112,6 +114,11 @@ export default function SignIn() {
             fullWidth
             variant="contained"
             sx={{ mt: 3, mb: 2 }}
+            onClick={() => {
+              if (!isLoading) {
+                return router.navigate("/");
+              }
+            }}
           >
             Sign In
           </Button>

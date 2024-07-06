@@ -6,6 +6,7 @@ import { useGetQuestion2 } from "../../hooks/useGetQuestion2";
 import { useGetQuestion3 } from "../../hooks/useGetQuestion3";
 import { dataType } from "../../interfaces/questionData.interface";
 import { useGetRoadmap } from "../../hooks/useGetRoadmap";
+import Loader from "../loader/Loader";
 
 function Quiz1() {
   const [questionPage, setQuestionPage] = useState(1);
@@ -53,7 +54,8 @@ function Quiz1() {
     }
   };
 
-  if (isLoading1 || isLoading2 || isLoading3) return <div>Loading...</div>;
+  if (isLoading1 || isLoading2 || isLoading3 || isLoading)
+    return <Loader />;
 
   if (dataRoadmap)
     router.navigate(`/roadmap/${dataRoadmap?.id}`, {

@@ -1,0 +1,250 @@
+{
+  "Roadmap": {
+    "Stages": [
+      {
+        "Name": "Cloud Computing Fundamentals",
+        "Timeframe": "2 months",
+        "Tasks": [
+          {
+            "Name": "AWS Introduction",
+            "Description": "Learn the basics of cloud computing, AWS services, and its architecture.",
+            "Subtasks": [
+              {
+                "Name": "Understanding Cloud Computing",
+                "Description": "Learn what cloud computing is and its advantages.",
+                "Resources": [
+                  "AWS Free Tier overview",
+                  "AWS Cloud Practitioner Essentials"
+                ],
+                "Time": "1 week"
+              },
+              {
+                "Name": "Overview of AWS Services",
+                "Description": "Explore core AWS services and their purposes.",
+                "Resources": ["AWS Documentation", "AWS Whitepapers"],
+                "Time": "1 week"
+              },
+              {
+                "Name": "AWS Global Infrastructure",
+                "Description": "Learn about AWS regions, availability zones, and edge locations.",
+                "Resources": ["AWS Global Infrastructure documentation"],
+                "Time": "1 week"
+              },
+              {
+                "Name": "Navigating the AWS Management Console",
+                "Description": "Get familiar with the AWS Management Console interface.",
+                "Resources": [
+                  "AWS Console walkthrough",
+                  "Udemy course on AWS Essentials"
+                ],
+                "Time": "1 week"
+              }
+            ],
+            "Time": "1 month"
+          },
+          {
+            "Name": "AWS Core Services",
+            "Description": "Understand key services like EC2, S3, IAM, and VPC.",
+            "Subtasks": [
+              {
+                "Name": "Introduction to EC2",
+                "Description": "Learn how to launch and configure EC2 instances.",
+                "Resources": ["AWS EC2 documentation", "AWS tutorials on EC2"],
+                "Time": "1 week"
+              },
+              {
+                "Name": "S3 Basics",
+                "Description": "Understand the use of S3 for storage solutions.",
+                "Resources": ["AWS S3 documentation", "AWS tutorials on S3"],
+                "Time": "1 week"
+              },
+              {
+                "Name": "IAM Overview",
+                "Description": "Learn about user management and policies in IAM.",
+                "Resources": ["AWS IAM documentation", "AWS IAM tutorials"],
+                "Time": "1 week"
+              },
+              {
+                "Name": "VPC Fundamentals",
+                "Description": "Understand how to set up and manage a Virtual Private Cloud.",
+                "Resources": ["AWS VPC documentation", "AWS VPC tutorials"],
+                "Time": "1 week"
+              }
+            ],
+            "Time": "1 month"
+          }
+        ]
+      },
+      {
+        "Name": "AWS Development Skills",
+        "Timeframe": "2 months",
+        "Tasks": [
+          {
+            "Name": "Serverless Computing with Lambda",
+            "Description": "Develop and deploy serverless applications using AWS Lambda.",
+            "Subtasks": [
+              {
+                "Name": "Introduction to Serverless",
+                "Description": "Learn the principles of serverless computing.",
+                "Resources": [
+                  "AWS Lambda documentation",
+                  "Serverless Framework tutorials"
+                ],
+                "Time": "1 week"
+              },
+              {
+                "Name": "Creating Lambda Functions",
+                "Description": "Learn how to create Lambda functions using the console.",
+                "Resources": [
+                  "AWS Lambda documentation",
+                  "AWS Lambda tutorials"
+                ],
+                "Time": "1 week"
+              },
+              {
+                "Name": "Event Sources and Triggers",
+                "Description": "Understand how to trigger Lambda functions with events.",
+                "Resources": ["AWS Lambda documentation", "AWS tutorials"],
+                "Time": "1 week"
+              },
+              {
+                "Name": "Deploying with Serverless Framework",
+                "Description": "Use the Serverless Framework to deploy Lambda functions.",
+                "Resources": [
+                  "Serverless Framework guides",
+                  "Udemy course on AWS Lambda"
+                ],
+                "Time": "1 week"
+              }
+            ],
+            "Time": "1 month"
+          },
+          {
+            "Name": "Database Management with DynamoDB",
+            "Description": "Use DynamoDB for NoSQL database management in AWS.",
+            "Subtasks": [
+              {
+                "Name": "DynamoDB Basics",
+                "Description": "Learn the basics of DynamoDB and its data model.",
+                "Resources": [
+                  "AWS DynamoDB documentation",
+                  "DynamoDB tutorials"
+                ],
+                "Time": "1 week"
+              },
+              {
+                "Name": "Creating and Managing Tables",
+                "Description": "Set up tables and understand partition keys.",
+                "Resources": [
+                  "AWS DynamoDB documentation",
+                  "AWS tutorials on DynamoDB"
+                ],
+                "Time": "1 week"
+              },
+              {
+                "Name": "DynamoDB Streams and Triggers",
+                "Description": "Learn about DynamoDB Streams and triggering Lambda functions.",
+                "Resources": ["AWS DynamoDB Streams documentation"],
+                "Time": "1 week"
+              },
+              {
+                "Name": "Advanced DynamoDB Features",
+                "Description": "Explore features like Global Tables and secondary indexes.",
+                "Resources": [
+                  "AWS DynamoDB documentation",
+                  "Advanced DynamoDB tutorials"
+                ],
+                "Time": "1 week"
+              }
+            ],
+            "Time": "1 month"
+          }
+        ]
+      },
+      {
+        "Name": "AWS Security and Deployment",
+        "Timeframe": "2 months",
+        "Tasks": [
+          {
+            "Name": "Security Best Practices",
+            "Description": "Learn about security considerations in AWS.",
+            "Subtasks": [
+              {
+                "Name": "IAM Roles and Policies",
+                "Description": "Set up IAM roles and manage policies for secure access.",
+                "Resources": ["AWS IAM best practices", "AWS Security Hub"],
+                "Time": "1 week"
+              },
+              {
+                "Name": "Data Encryption",
+                "Description": "Implement data encryption using AWS KMS.",
+                "Resources": ["AWS KMS documentation", "Encryption tutorials"],
+                "Time": "1 week"
+              },
+              {
+                "Name": "Monitoring and Compliance",
+                "Description": "Use AWS tools for monitoring security and compliance.",
+                "Resources": [
+                  "AWS CloudTrail",
+                  "AWS Config",
+                  "AWS Security Hub"
+                ],
+                "Time": "1 week"
+              },
+              {
+                "Name": "Implementing Security Groups",
+                "Description": "Configure security groups and network ACLs.",
+                "Resources": [
+                  "AWS VPC documentation",
+                  "AWS tutorials on security groups"
+                ],
+                "Time": "1 week"
+              }
+            ],
+            "Time": "1 month"
+          },
+          {
+            "Name": "Deployment and Automation",
+            "Description": "Deploy applications to AWS using various tools.",
+            "Subtasks": [
+              {
+                "Name": "Using AWS CodePipeline",
+                "Description": "Set up CI/CD pipelines with AWS CodePipeline.",
+                "Resources": [
+                  "AWS CodePipeline documentation",
+                  "CodePipeline tutorials"
+                ],
+                "Time": "1 week"
+              },
+              {
+                "Name": "AWS CloudFormation",
+                "Description": "Automate infrastructure deployment using CloudFormation.",
+                "Resources": [
+                  "AWS CloudFormation documentation",
+                  "CloudFormation templates"
+                ],
+                "Time": "1 week"
+              },
+              {
+                "Name": "Deploying with Elastic Beanstalk",
+                "Description": "Use Elastic Beanstalk for quick application deployment.",
+                "Resources": [
+                  "AWS Elastic Beanstalk documentation",
+                  "Beanstalk tutorials"
+                ],
+                "Time": "1 week"
+              },
+              {
+                "Name": "Automating with AWS CLI",
+                "Description": "Use the AWS CLI for scripting and automation.",
+                "Resources": ["AWS CLI documentation", "AWS CLI tutorials"],
+                "Time": "1 week"
+              }
+            ],
+            "Time": "1 month"
+          }
+        ]
+      }
+    ]
+  }
+}
