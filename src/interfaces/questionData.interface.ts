@@ -6,4 +6,5 @@ export interface dataType {
     { content: string },
     { content: string }
   ];
+  status: string;
 }

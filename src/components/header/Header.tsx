@@ -58,6 +58,7 @@ function Header() {
               letterSpacing: ".3rem",
               color: "inherit",
               textDecoration: "none",
+              cursor: "pointer",
             }}
             onClick={() => router.navigate("/")}
           >

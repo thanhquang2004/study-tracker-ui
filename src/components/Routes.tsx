@@ -5,6 +5,7 @@ import { createBrowserRouter } from "react-router-dom";
 import Quiz1 from "./quiz/Quiz1";
 import RoadmapRoute from "./roadmap/RoadmapRoute";
 import RoadmapListRoute from "./roadmap/RoadmapListRoute";
+import ScheduleRoute from "./schedule/ScheduleRoute";
 
 const router = createBrowserRouter([
   {
@@ -31,6 +32,10 @@ const router = createBrowserRouter([
   {
     path: "/roadmap",
     element: <RoadmapListRoute />,
+  },
+  {
+    path: "/schedule",
+    element: <ScheduleRoute />,
   },
 ]);
 
