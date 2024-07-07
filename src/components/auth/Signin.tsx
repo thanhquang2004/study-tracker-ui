@@ -47,10 +47,11 @@ export default function SignIn() {
   const handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
     const data = new FormData(event.currentTarget);
-    const formData = await Object.fromEntries(data.entries());
-    const result = await signInSchema.safeParse(formData);
+    const formData = Object.fromEntries(data.entries());
+    const result = signInSchema.safeParse(formData);
+    console.log(result.data);
 
-    login(result.data);
+    await login(result.data!);
   };
 
   if (isLoading) {

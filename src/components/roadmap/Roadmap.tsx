@@ -18,6 +18,7 @@ import {
 import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
 import { RoadmapType } from "../../interfaces/roadmap.interface";
 import React, { useState } from "react";
+import QuizComponent from "../review/ReviewQuiz";
 
 const Roadmap = ({ roadmap }: RoadmapType) => {
   const [openResourceModal, setOpenResourceModal] = useState(false);
@@ -98,6 +99,7 @@ const Roadmap = ({ roadmap }: RoadmapType) => {
                                   </span>
                                 </IconButton>
                               </Tooltip>
+                              <QuizComponent quizData={subtask} />
                             </ListItem>
                           ))}
                         </List>
